@@ -1,0 +1,46 @@
+type Query {
+    allUserRoles : [UserRole]
+    userRolePrivileges(userRoleId: String) : UserRolePrivilege
+}
+
+type Mutation {
+    createUserRolePrivileges(userRoleInput: UserRoleInput) : UserRolePrivilege
+    updateUserRolePrivileges(userRoleInput: UserRoleInput) : UserRolePrivilege
+    deleteUserRolePrivileges(userRoleId: String) : Boolean
+}
+
+type UserRole {
+    userRoleId: String
+    userRoleName: String
+    description: String
+    rolePriority: Int!
+}
+
+type UserRolePrivilege{
+    userRole: UserRole
+    allowedUserPrivileges: [AllowedUserPrivilege]
+}
+
+type AllowedUserPrivilege {
+    userRoleID: String
+    create: Boolean
+    update: Boolean
+    delete: Boolean
+    read: Boolean
+}
+
+input UserRoleInput {
+    userRoleId: String!
+    userRoleName: String!
+    description: String
+    rolePriority: Int!
+    allowedUserPrivileges: [AllowedUserPrivilegesInput]
+}
+
+input AllowedUserPrivilegesInput {
+    userRoleID: String
+    create: Boolean
+    update: Boolean
+    delete: Boolean
+    read: Boolean
+}

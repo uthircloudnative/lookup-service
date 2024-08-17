@@ -1,0 +1,84 @@
+{
+   "userRoleId":"ADN1",
+   "userRoleName":"Admin",
+   "description":"Admin User",
+   "allowedUserPrivileges":[
+      {
+         "userRoleID":"ADN1",
+         "create": false,
+         "update": false,
+         "delete": false,
+         "read": false
+      },
+      {
+         "userRoleID":"PMR1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"EDR1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"EMR1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"DLE1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"TLE1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"DER1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"TER1",
+         "create":"Y",
+         "update":"Y",
+         "delete":"Y",
+         "read":"Y"
+      },
+      {
+         "userRoleID":"PER1",
+         "create":"Y",
+         "update":"Y",
+         "delete":"Y",
+         "read":"Y"
+      },
+      {
+         "userRoleID":"DOE1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      },
+      {
+         "userRoleID":"RMR1",
+         "create": true,
+         "update": true,
+         "delete": true,
+         "read": true
+      }
+   ]
+}
